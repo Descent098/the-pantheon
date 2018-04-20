@@ -29,7 +29,8 @@ class Gods(ABC):
         self.hitpoints = hitpoints
         self.worshipers = initialworshipers
         self.followerrate = 1
-        self.determinerank(self.worshipers)
+        self.rank = 5
+
 
     @abstractmethod
     def determinerank(self, worshipers):
@@ -62,4 +63,4 @@ class Gods(ABC):
         worshipersstring = ("Worshipers: {}".format(self.worshipers))
         followerratestring = ("Follower Rate: {}".format(self.followerrate))
 
-        return  "{} \n{} \n{} \n{} \n{}".format(namestring, typestring, hpstring, rankstring, worshipersstring, followerratestring)
+        return  "\n{} \n{} \n{} \n{} \n{}".format(namestring, typestring, hpstring, rankstring, worshipersstring, followerratestring)

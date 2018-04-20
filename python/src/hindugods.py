@@ -1,11 +1,10 @@
 import gods
 
-class greekgod(gods.Gods):
+class hindugod(gods.Gods):
     def __init__(self, name, hitpoints, initialworshipers):
-        super().__init__(name, "Greek", hitpoints, initialworshipers)
+        super().__init__(name, "Hindu", hitpoints, initialworshipers)
         self.determinerank(self.worshipers)
         self.typebonus()
-
 
     def determinerank(self, worshipers):
         """Method that changes the rank of the god based on worshipers"""
@@ -33,24 +32,25 @@ class greekgod(gods.Gods):
     def typebonus(self):
         """Assigns typebonus based on current rank"""
         if self.rank == 1:
-            self.followerrate = 1000
+            self.hitpoints *= 1000
             return None
         elif self.rank == 2:
-            self.followerrate = 100
+            self.hitpoints *= 100
             return None
         elif self.rank == 3:
-            self.followerrate = 10
+            self.hitpoints *= 10
             return None
         elif self.rank == 4:
-            self.followerrate = 2
+            self.hitpoints *= 2
             return None
         else:
-            self.followerrate = 1
+            self.hitpoints *= 1
             return None
 
-class zuess(greekgod):
+
+class vishnu(hindugod):
     def __init__(self):
-        super().__init__("Zuess", 1000000, 1000000)
+        super().__init__("Vishnu", 1000000, 1000000)
 
 
     def __str__(self):
