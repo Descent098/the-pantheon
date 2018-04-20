@@ -1,9 +1,29 @@
 from abc import ABC, abstractmethod #Library that forces abstraction, similar to abstract classes in java
 
 class Gods(ABC):
+    """
+    This is the main god class from which all other classes derive
+    """
+    version = '0.1'
 
     @abstractmethod
     def __init__(self, name, type, hitpoints, initialworshipers):
+        """
+        creates the variables associated with the class
+        :type name: string
+        :param name: the name of the god
+
+        :type type: string
+        :param type: the area the god is from i.e. greek
+
+        :type hitpoints: string
+        :param hitpoints: the amount of hitpoints the god starts with
+
+        :type initialworshipers: string
+        :param initialworshipers: the initial amount of worshipers the god has
+
+
+        """
         self.name = name
         self.type = type
         self.hitpoints = hitpoints
@@ -13,8 +33,16 @@ class Gods(ABC):
 
     @abstractmethod
     def determinerank(self, worshipers):
-        """Method that changes the rank of the god based on worshipers;
-        overridden in 'type' class | Is an abstact Method"""
+        """
+
+        :type worshipers: string
+        :param worshipers: the amount of worshipers a god currently has
+
+        Method that changes the rank of the god based on worshipers;
+        overridden in 'type' class | Is an abstact Method
+
+
+        """
         pass
 
     @abstractmethod

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>gods module</title>
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gods">
+<span id="gods-module"></span><h1>gods module</h1>
+<dl class="class">
+<dt id="gods.Gods">
+<em class="property">class </em><code class="descclassname">gods.</code><code class="descname">Gods</code><span class="sig-paren">(</span><em>name</em>, <em>type</em>, <em>hitpoints</em>, <em>initialworshipers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gods.xhtml#Gods"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>This is the main god class from which all other classes derive</p>
+<dl class="method">
+<dt id="gods.Gods.determinerank">
+<code class="descname">determinerank</code><span class="sig-paren">(</span><em>worshipers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gods.xhtml#Gods.determinerank"><span class="viewcode-link">[source]</span></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>worshipers</strong> (<em>string</em>) – the amount of worshipers a god currently has</p>
+</dd>
+</dl>
+<p>Method that changes the rank of the god based on worshipers;
+overridden in ‘type’ class | Is an abstact Method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gods.Gods.typebonus">
+<code class="descname">typebonus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gods.xhtml#Gods.typebonus"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Method that will be overridden based on which type of god the class is;
+adds a bonus to an attribute based on type and rank | Is an abstact Method</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="gods.Gods.version">
+<code class="descname">version</code><em class="property"> = '0.1'</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

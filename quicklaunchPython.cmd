@@ -1,2 +1,3 @@
 cd python
-python greekgods.py
+cd src
+python textversion.py

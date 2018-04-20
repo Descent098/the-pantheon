@@ -48,10 +48,8 @@ class greekgods(gods.Gods):
 class zuess(greekgods):
     def __init__(self):
         super().__init__("Zuess", 1000000, 1000000)
-        print (self)
+
 
     def __str__(self):
         """String representation; calls super class greekgods"""
         return super().__str__()
-
-zuess = zuess()
