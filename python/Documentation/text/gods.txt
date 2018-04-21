@@ -1,0 +1,25 @@
+gods module
+***********
+
+class gods.Gods(name, type, hitpoints, initialworshipers)
+
+   Bases: "abc.ABC"
+
+   This is the main god class from which all other classes derive
+
+   determinerank(worshipers)
+
+      Parameters:
+         **worshipers** (*string*) -- the amount of worshipers a god
+         currently has
+
+      Method that changes the rank of the god based on worshipers;
+      overridden in 'type' class | Is an abstact Method
+
+   typebonus()
+
+      Method that will be overridden based on which type of god the
+      class is; adds a bonus to an attribute based on type and rank |
+      Is an abstact Method
+
+   version = '0.1'

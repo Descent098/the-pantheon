@@ -1,0 +1,18 @@
+greekgods module
+****************
+
+class greekgods.greekgod(name, hitpoints, initialworshipers)
+
+   Bases: "gods.Gods"
+
+   determinerank(worshipers)
+
+      Method that changes the rank of the god based on worshipers
+
+   typebonus()
+
+      Assigns typebonus based on current rank
+
+class greekgods.zuess
+
+   Bases: "greekgods.greekgod"
