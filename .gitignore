@@ -131,9 +131,11 @@ venv.bak/
 .mypy_cache/
 
 #documentation markup
-.rst
+*.rst
 _static/
 _templates/
+conf.py
+_build/
 
 #documentation runfiles
 .bat
