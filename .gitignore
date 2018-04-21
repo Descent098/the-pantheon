@@ -132,6 +132,8 @@ venv.bak/
 
 #documentation markup
 .rst
+_static/
+_templates/
 
 #documentation runfiles
 .bat
