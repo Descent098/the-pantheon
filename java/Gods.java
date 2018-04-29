@@ -6,27 +6,35 @@ abstract public class Gods{
   private int worshipers;
 
   /**Constructor for god class*/
-  public Gods(String name,String type, int hitpoints, int intinitialworshipers){
-
+  public Gods(String initialName,String initialType, int initialHitPoints, int initialWorshipers){
+    name = initialName;
+    type = initialType;
+    hitpoints = initialHitPoints;
+    worshipers = initialWorshipers;
   }
 
 
+  public int getWorshipers(){
+    int newWorshipers = new Integer(worshipers);
+    return newWorshipers;
+  }
+
+  public void setRank(int newRank){
+    rank = newRank;
+  }
+
   public String toString(){
-    return ("Name: "+ name + "\nType:" + type + "\nHP: " + hitpoints + "Rank: " + rank + "Worshipers: " + worshipers)
+    return ("Name: "+ name + "\nType:" + type + "\nHP: " + hitpoints + "\nRank: " + rank + "\nWorshipers: " + worshipers);
   }
 
 
   /**Method that determines a Gods Rank based on worshipers;
   gets overridden because each God Type has different threshholds*/
-  public abstract void determineRank(worshipers){
-
-  }
+  public abstract void determineRank();
 
   /**Method that gives God bonus based on Type and Rank;
   gets overridden because each God Type has bonusses*/
-  public abstract void typeBonus(worshipers){
-
-  }
+  public abstract void typeBonus(int worshipers);
 
 
 }
